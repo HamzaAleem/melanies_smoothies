@@ -1,3 +1,4 @@
 # requirment.txt
 snowflake-snowspark-python
 streamlit
+st-snowflake-connection

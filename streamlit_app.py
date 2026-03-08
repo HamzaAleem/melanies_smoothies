@@ -15,7 +15,7 @@ st.write("Name on Smoothie will be:", name_on_order)
 # st.write(st.secrets)
 
 # ✅ Create Snowpark session
-session = Session.builder.configs(st.secrets["connections"]["snowflake"]).create()
+session = Session.builder.configs(st.secrets["snowflake"]).create()
 
 # ✅ Fetch fruit options
 fruit_df = session.table("SMOOTHIES.PUBLIC.FRUIT_OPTIONS").select(col('FRUIT_NAME'))

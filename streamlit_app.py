@@ -12,6 +12,7 @@ st.write("Name on Smoothie will be:",name_on_order )
 
 st.write(st.secrets)
 cnx = st.secrets["snowflake"]["account"]
+session = Session.builder.configs(st.secrets["connections"]["snowflake"]).create()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 # st.dataframe(data=my_dataframe, use_container_width=True)
 ingredients_list = st.multiselect(

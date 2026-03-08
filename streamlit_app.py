@@ -38,9 +38,13 @@ if ingredients_list:
 
     if time_to_insert:
         
+        my_insert_stmt = f"""
+        INSERT INTO ORDERS (NAME_ON_ORDER, INGREDIENTS)
+        VALUES ('{name_on_order}', '{ingredients_string}')
+        """
         session.sql(my_insert_stmt).collect()
-        
         st.success('Your Smoothie is ordered!', icon="✅")
+      
 
         
 

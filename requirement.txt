@@ -2,3 +2,5 @@
 snowflake-snowspark-python
 streamlit
 st-snowflake-connection
+pandas
+snowflake-connector-python
